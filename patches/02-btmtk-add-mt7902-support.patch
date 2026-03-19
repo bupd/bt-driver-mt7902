@@ -1,0 +1,36 @@
+--- /tmp/bt-orig/btmtk.c	2025-11-02 18:48:05.000000000 +0530
++++ /home/bupdlap/update/bt-driver-mt7902/btmtk.c	2026-02-25 17:00:53.568640582 +0530
+@@ -821,7 +821,7 @@
+ 	u32 val;
+ 	int err;
+ 
+-	if (dev_id == 0x7922) {
++	if (dev_id == 0x7922 || dev_id == 0x7902) {
+ 		err = btmtk_usb_uhw_reg_read(hdev, MTK_BT_SUBSYS_RST, &val);
+ 		if (err < 0)
+ 			return err;
+@@ -919,7 +919,7 @@
+ 	if (err < 0)
+ 		bt_dev_err(hdev, "Reset timeout");
+ 
+-	if (dev_id == 0x7922) {
++	if (dev_id == 0x7922 || dev_id == 0x7902) {
+ 		err = btmtk_usb_uhw_reg_write(hdev, MTK_UDMA_INT_STA_BT, 0x000000FF);
+ 		if (err < 0)
+ 			return err;
+@@ -1323,6 +1323,7 @@
+ 	case 0x7668:
+ 		fwname = FIRMWARE_MT7668;
+ 		break;
++	case 0x7902:
+ 	case 0x7922:
+ 	case 0x7925:
+ 	case 0x7961:
+@@ -1494,6 +1495,7 @@
+ MODULE_FIRMWARE(FIRMWARE_MT7622);
+ MODULE_FIRMWARE(FIRMWARE_MT7663);
+ MODULE_FIRMWARE(FIRMWARE_MT7668);
++MODULE_FIRMWARE(FIRMWARE_MT7902);
+ MODULE_FIRMWARE(FIRMWARE_MT7922);
+ MODULE_FIRMWARE(FIRMWARE_MT7961);
+ MODULE_FIRMWARE(FIRMWARE_MT7925);

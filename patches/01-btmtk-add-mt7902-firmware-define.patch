@@ -1,0 +1,10 @@
+--- /tmp/bt-orig/btmtk.h	2025-11-02 18:48:05.000000000 +0530
++++ /home/bupdlap/update/bt-driver-mt7902/btmtk.h	2026-02-25 17:00:53.501607082 +0530
+@@ -4,6 +4,7 @@
+ #define FIRMWARE_MT7622		"mediatek/mt7622pr2h.bin"
+ #define FIRMWARE_MT7663		"mediatek/mt7663pr2h.bin"
+ #define FIRMWARE_MT7668		"mediatek/mt7668pr2h.bin"
++#define FIRMWARE_MT7902		"mediatek/BT_RAM_CODE_MT7902_1_1_hdr.bin"
+ #define FIRMWARE_MT7922		"mediatek/BT_RAM_CODE_MT7922_1_1_hdr.bin"
+ #define FIRMWARE_MT7961		"mediatek/BT_RAM_CODE_MT7961_1_2_hdr.bin"
+ #define FIRMWARE_MT7925		"mediatek/mt7925/BT_RAM_CODE_MT7925_1_1_hdr.bin"
